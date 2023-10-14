@@ -12,7 +12,10 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
-#print("{}/page/{}".format(FORUM_URL, 2))
+#Parameters
+min_kudos = 10
+debug_mode = 0
+
 
 def get_post_links_and_titles(url):
   #List that has all the post details
@@ -46,7 +49,8 @@ def get_post_links_and_titles(url):
   return post_list
 
 post_list = get_post_links_and_titles(FORUM_URL)
-print(post_list[0]['link'])
+if debug_mode == 1:
+  print(post_list[0]['link'])
 
 def get_post_data_and_kudos(post_list):
   post_details = []
@@ -62,6 +66,8 @@ def get_post_data_and_kudos(post_list):
 
     for i in range(len(details)):
       post_kudos = int(kudos[i].text.strip())
+      if post_kudos < min_kudos:
+        break
       post_text = details[i].text.strip()
       post_details.append({
           'Message': post_text,
@@ -71,3 +77,6 @@ def get_post_data_and_kudos(post_list):
     return post_details
 
 post_details = get_post_data_and_kudos(post_list)
+if debug_mode == 1:
+  for post in post_details:
+    print(f"Message: {post['Message']}\nKudos: {post['Kudos']}\n{'-'*40}")
