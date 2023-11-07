@@ -1,3 +1,5 @@
+import sys
+import os
 import requests
 import firebase_admin
 from bs4 import BeautifulSoup
@@ -15,8 +17,13 @@ headers = {
 }
 
 #Parameters
+target_posts = 1
 min_kudos = 10
 debug_mode = 0
+
+target_posts = int(sys.argv[1])
+if target_posts <= 0:
+  target_posts = 1
 
 
 def get_post_links_and_titles(url):
@@ -24,7 +31,7 @@ def get_post_links_and_titles(url):
   post_list = []
 
   #For every page in the credit card forums (1, 4384)
-  for i in range(1, 2):
+  for i in range(1, target_posts+1):
     #If it is the first page, keep the URL as is
     if i == 1:
       response = requests.get(url, headers=headers)
@@ -83,7 +90,9 @@ if debug_mode == 1:
   for post in post_details:
     print(f"Message: {post['Message']}\nKudos: {post['Kudos']}\n{'-'*40}")
 
-cred = credentials.Certificate("/cc-recomendation-firebase-adminsdk-xe1r9-d36ef51293.json")
+path = os.path.realpath("cc-recomendation-firebase-adminsdk-xe1r9-d36ef51293.json")
+print(path)
+cred = credentials.Certificate(path)
 post_identifier = "Message & Kudos"
 #firebase_admin.initialize_app(cred, {
 #    'databaseURL': 'https://cc-recomendation-default-rtdb.firebaseio.com/'
