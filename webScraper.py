@@ -1,5 +1,7 @@
 import requests
+import firebase_admin
 from bs4 import BeautifulSoup
+from firebase_admin import credentials, db
 
 #URL of the FicoForums website
 BASE_URL = 'https://ficoforums.myfico.com/'
@@ -80,3 +82,13 @@ post_details = get_post_data_and_kudos(post_list)
 if debug_mode == 1:
   for post in post_details:
     print(f"Message: {post['Message']}\nKudos: {post['Kudos']}\n{'-'*40}")
+
+cred = credentials.Certificate("/cc-recomendation-firebase-adminsdk-xe1r9-d36ef51293.json")
+post_identifier = "Message & Kudos"
+#firebase_admin.initialize_app(cred, {
+#    'databaseURL': 'https://cc-recomendation-default-rtdb.firebaseio.com/'
+#})
+
+ref = db.reference('MyFicoForums_Posts')
+post_ref = ref.child(post_identifier).set(post_details)
+#ref.push(post_details)
