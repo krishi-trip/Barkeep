@@ -19,7 +19,7 @@ headers = {
 #Parameters
 target_posts = 1
 min_kudos = 10
-debug_mode = 0
+debug_mode = 1
 
 target_posts = int(sys.argv[1])
 if target_posts <= 0:
@@ -94,9 +94,9 @@ path = os.path.realpath("cc-recomendation-firebase-adminsdk-xe1r9-d36ef51293.jso
 print(path)
 cred = credentials.Certificate(path)
 post_identifier = "Message & Kudos"
-#firebase_admin.initialize_app(cred, {
-#    'databaseURL': 'https://cc-recomendation-default-rtdb.firebaseio.com/'
-#})
+firebase_admin.initialize_app(cred, {
+   'databaseURL': 'https://cc-recomendation-default-rtdb.firebaseio.com/'
+})
 
 ref = db.reference('MyFicoForums_Posts')
 post_ref = ref.child(post_identifier).set(post_details)
