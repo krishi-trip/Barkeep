@@ -65,7 +65,7 @@ def compute_recommendations():
 
     valid_params = [p for p in param if p in df.columns]
     if not valid_params:
-        valid_params = cc_columns[1:-2]  
+        valid_params = cc_columns[1:-2]
 
     df['Fit'] = df[valid_params].sum(axis=1)
     fil = df.loc[df['Credit Score'] <= user_credit_score]
@@ -76,8 +76,10 @@ def compute_recommendations():
     if num_of_results > fil.shape[0]:
         num_of_results = fil.shape[0]
 
-    formatted_output = "\n".join(f"{i+1}. {card}" for i, card in enumerate(fil['Credit Card']))
-    return f"Here are the best {num_of_results} cards for you:\n{formatted_output}"
+    formatted_output = "\n".join(f"{i+1}. {str(card)}" for i, card in enumerate(fil['Credit Card']))
+    
+    return f"Here are the best {str(num_of_results)} cards for you:\n{formatted_output}"
+
 
 
 if __name__ == '__main__':
