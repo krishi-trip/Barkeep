@@ -10,10 +10,10 @@ df.columns = cc_columns
 question_index = 0
 user_responses = {}
 param = []
-num_of_results = 10
+num_of_results = 5
 user_credit_score = None
 
-questions = ["What is your credit score?"] + [f"Is {cc} important to you? (0 for no, 1 for yes)" for cc in cc_columns[1:-2]]
+questions = ["What is your credit score?"] + [f"Is {cc} important to you? (0 for no, 1 for yes)" for cc in cc_columns[1:-1]]
 
 @app.route("/")
 def index():
@@ -48,7 +48,7 @@ def chat():
             if val not in [0, 1]:
                 return "Must be a 0 or 1. " + questions[question_index]
             if val == 1:
-                param.append(cc_columns[question_index - 1])
+                param.append(cc_columns[question_index])
             question_index += 1
         except ValueError:
             return "Must be a 0 or 1. " + questions[question_index]
