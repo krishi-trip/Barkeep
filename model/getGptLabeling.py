@@ -1,8 +1,11 @@
 import openai
 import json
+import os.path
+import pandas as pd
+
 
 post_content = []
-with open('../data.json') as json_file:
+with open(os.path.dirname(__file__) + '/../data.json') as json_file:
     post_content = json.load(json_file)
 
 API_KEY = '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'
@@ -34,14 +37,11 @@ score the following categories:
 
     Credit Score
 
-For the "Cash Back" categories:
+For each aspect (except Credit Score):
 Rate a category 1 if the article describes that aspect of the credit card to be positive, or if you know it to be positive.
 Rate a category -1 if the article describes that aspect of the credit card to be negative, or if you know it to be negative.
 Rate a category 0 if you are not sure.
 
-For the Annual Fee, Credit Line, and Credit Score categories:
-Give the Annual Fee category a value that matches the Annual Fee of the card if stated in the above text, else give the category -1.
-Give the Credit Line category a value that matches the Credit Line of the card if stated in the above text, else give the category -1.
 Give the Credit Score category a value that matches the Credit Score of the card if stated in the above text, else give the category -1.
 
 Finally, output your ratings with the following format:
@@ -52,8 +52,8 @@ Entertainment Rewards: 1
 Dining Rewards: 0
 Gas Rewards: -1
 Grocery Rewards: 0
-Annual Fee: 200
-Credit Line: 5000
+Annual Fee: 0
+Credit Line: 1
 Credit Score: 650
 
 Only output the above, provide 0 explanation or any other additional text. Only the data.
@@ -151,4 +151,4 @@ def process_labeled_data(data):
   return collectivize_data(processed_data)
 
 fully_labeled_data = process_labeled_data(filtered_labeled_data).round(3)
-fully_labeled_data.to_csv('../CardData.csv')
+fully_labeled_data.to_csv('CardData.csv')

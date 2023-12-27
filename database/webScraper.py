@@ -5,6 +5,8 @@ import re
 import random
 import requests
 import json
+from bs4 import BeautifulSoup
+
 
 #URL of the FicoForums website
 BASE_URL = 'https://ficoforums.myfico.com/'
@@ -16,7 +18,7 @@ headers = {
 }
 
 #Parameters
-target_pages = 60
+target_pages = 2
 min_kudos = 5
 debug_mode = 0
 
@@ -120,7 +122,7 @@ def get_post_data_and_kudos(post_list):
   return post_content
 
 post_content = get_post_data_and_kudos(post_list)
-with open('../data.json', 'w') as f:
+with open(os.path.dirname(__file__) + '/../data.json', 'w') as f:
     json.dump(post_content, f)
 
 if debug_mode == 1:

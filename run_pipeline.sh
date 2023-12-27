@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Checking for Requirements"
-pip install -r requirements.txt
+pip install -r requirements.txt | grep -v 'already satisfied\|Defaulting to user installation'
 
 echo "Executing Pipeline"
 
@@ -10,11 +10,8 @@ python database/webScraper.py
 echo "Parsing data with GPT"
 python model/getGptLabeling.py
 
-echo "Calculating metrics"
-python model/calculateMetrics.py
-
 echo "Update chatbot metrics"
-cp CardData.csv chatbot/CardData.csv
+cp model/CardData.csv chatbot/CardData.csv
 # How often does AWS update?
 
 echo "Update databse"
