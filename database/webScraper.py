@@ -1,37 +1,36 @@
 import sys
 import os
+import pandas as pd
+import re
+import random
 import requests
-import firebase_admin
-from bs4 import BeautifulSoup
-from firebase_admin import credentials, db
+import json
 
 #URL of the FicoForums website
 BASE_URL = 'https://ficoforums.myfico.com/'
-
 #URL of the credit card forums
 FORUM_URL = 'https://ficoforums.myfico.com/t5/Credit-Cards/bd-p/creditcard'
-
 # A common user agent, can help bypass some scraping restrictions
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
 #Parameters
-target_posts = 1
-min_kudos = 10
-debug_mode = 1
+target_pages = 60
+min_kudos = 5
+debug_mode = 0
 
-target_posts = int(sys.argv[1])
-if target_posts <= 0:
-  target_posts = 1
-
-
+#Making sure we get at least 1 page of posts
+if target_pages <= 0:
+  target_pages = 1
+  
+#Function that gets the title and linkss of each post
 def get_post_links_and_titles(url):
   #List that has all the post details
   post_list = []
 
   #For every page in the credit card forums (1, 4384)
-  for i in range(1, target_posts+1):
+  for i in range(1, target_pages+1):
     #If it is the first page, keep the URL as is
     if i == 1:
       response = requests.get(url, headers=headers)
@@ -58,11 +57,16 @@ def get_post_links_and_titles(url):
   return post_list
 
 post_list = get_post_links_and_titles(FORUM_URL)
-if debug_mode == 1:
-  print(post_list[0]['link'])
+#Removing the first 4 links which are info/help thread posts
+post_list = post_list[4:]
 
+if debug_mode == 1:
+  for post in range(len(post_list)):
+    print(post_list[post]['link'])
+
+#Function that gets the contents and replies of each post
 def get_post_data_and_kudos(post_list):
-  post_details = []
+  post_content = []
 
   for post in post_list:
     url = post['link']
@@ -70,34 +74,59 @@ def get_post_data_and_kudos(post_list):
     response = requests.get(url, headers=headers)
     soup = BeautifulSoup(response.content, 'html.parser')
 
-    details = soup.find_all('div', class_='lia-message-body-content')
+    #Get the title of the post
+    title = soup.find_all('div', class_='lia-message-subject')
+    #Get the post and all its replies
+    content = soup.find_all('div', class_='lia-message-body-content')
+    #Get the Kudos of the post and all its replies
     kudos = soup.find_all('span', class_='MessageKudosCount')
 
-    for i in range(len(details)):
-      post_kudos = int(kudos[i].text.strip())
-      if post_kudos < min_kudos:
-        break
-      post_text = details[i].text.strip()
-      post_details.append({
-          'Message': post_text,
-          'Kudos': post_kudos
+    #Get the post kudos
+    main_post_kudos = int(kudos[0].text.strip())
+
+    #Filter the post based on Kudos
+    if (main_post_kudos < min_kudos):
+      continue
+
+    #Separate the post
+    main_post = content[0].text.strip()
+    #Separate the replies
+    post_replies = content[1:]
+
+    replies = []
+
+    #Add all of the replies and their Kudos to a list
+    for i in range(len(post_replies)):
+      reply_kudos = int(kudos[i].text.strip())
+
+      #Filter the reply based on Kudos
+      if (reply_kudos < min_kudos):
+        continue
+
+      #Add the reply to the list
+      replies.append({
+          'Reply': post_replies[i].text.strip(),
+          'Kudos': reply_kudos
       })
 
-    return post_details
+    #Add the post and its replies to the list of posts
+    post_content.append({
+        'Title': title[0].text.strip(),
+        'Message': main_post,
+        'Kudos': main_post_kudos,
+        'Replies': replies
+    })
 
-post_details = get_post_data_and_kudos(post_list)
+  return post_content
+
+post_content = get_post_data_and_kudos(post_list)
+with open('../data.json', 'w') as f:
+    json.dump(post_content, f)
+
 if debug_mode == 1:
-  for post in post_details:
-    print(f"Message: {post['Message']}\nKudos: {post['Kudos']}\n{'-'*40}")
-
-path = os.path.realpath("cc-recomendation-firebase-adminsdk-xe1r9-d36ef51293.json")
-print(path)
-cred = credentials.Certificate(path)
-post_identifier = "Message & Kudos"
-firebase_admin.initialize_app(cred, {
-   'databaseURL': 'https://cc-recomendation-default-rtdb.firebaseio.com/'
-})
-
-ref = db.reference('MyFicoForums_Posts')
-post_ref = ref.child(post_identifier).set(post_details)
-#ref.push(post_details)
+  for post in post_content:
+    print(f"Message: {post['Message']}\nKudos: {post['Kudos']}")
+    for reply in range(len(post['Replies'])):
+      print(f"Reply: {post['Replies'][reply]['Reply']}\nKudos: {post['Replies'][reply]['Kudos']}")
+    print(f"{'-'*250}")
+  print(len(post_content))
