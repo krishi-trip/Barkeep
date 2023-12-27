@@ -1,42 +1,41 @@
-,Credit Card,Travel Rewards,Entertainment Rewards,Dining Rewards,Gas Rewards,Grocery Rewards,Annual Fee,Credit Line,Credit Score
-0,AAA Daily Advantage VS,0.0,0.0,0.0,0.0,1.0,-1.0,0.0,-1.0
-1,AMEX Gold,1.0,0.0,0.0,0.0,0.0,0.0,1.0,-1.0
-2,AOD FCU VS,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-3,American Express Hilton Honors,0.0,0.0,0.0,0.0,0.0,0.0,0.0,698.0
-4,American Express Membership Rewards,1.0,1.0,0.0,0.0,0.0,0.0,1.0,-1.0
-5,Amex Bus Plat,1.0,0.0,0.0,0.0,0.0,1.0,0.0,-1.0
-6,Amex Gold,1.0,0.0,1.0,0.0,0.0,1.0,0.0,-1.0
-7,ArrivalUpgrade/Downgrade,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-8,Aviator Red,0.0,0.0,0.0,0.0,0.0,0.0,1.0,-1.0
-9,BoA Customized Cash Rewards WMC 1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-10,BofA Premium Rewards,1.0,0.0,0.0,0.0,0.0,1.0,0.0,-1.0
-11,Chase Amazon VS,0.0,0.0,1.0,0.0,1.0,0.0,0.0,-1.0
-12,Chase Freedom Unlimited,1.0,0.0,0.0,0.0,0.0,0.0,1.0,800.0
-13,Chase Sapphire Preferred,1.0,1.0,0.5,0.0,0.0,-0.5,0.5,414.5
-14,Citi Custom Cash Rewards WEMC,0.0,1.0,0.0,0.0,-1.0,0.0,0.0,650.0
-15,Citi Double Cash,0.0,0.0,1.0,0.0,0.0,0.0,0.0,-1.0
-16,Citi Shop Your Way card,0.0,0.0,1.0,1.0,1.0,0.0,1.0,-1.0
-17,Citi Travel Cards,1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-18,Costco Visa,0.0,0.0,0.0,1.0,0.0,0.0,0.0,-1.0
-19,Delta Gold Personal,0.0,0.0,0.0,0.0,0.0,-1.0,0.0,-1.0
-20,Delta Plat,1.0,0.0,0.0,0.0,0.0,1.0,0.0,-1.0
-21,Diners Club,0.0,1.0,0.0,0.0,0.0,-1.0,1.0,-1.0
-22,Freedom,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-23,Freedom Flex,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-24,Hyatt,1.0,0.0,0.0,0.0,0.0,1.0,0.0,-1.0
-25,IHG49,1.0,0.0,0.0,0.0,0.0,1.0,0.0,-1.0
-26,Mastercard Platinum Cash Back,0.0,0.0,1.0,1.0,-1.0,-1.0,1.0,-1.0
-27,Mastercard World Credit Card,1.0,1.0,1.0,1.0,1.0,0.0,0.0,-1.0
-28,Mid Florida CU card,0.0,0.0,0.0,0.0,0.0,-1.0,1.0,-1.0
-29,Not mentioned,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-30,PNC Cash Back,1.0,1.0,1.0,1.0,-1.0,0.0,0.0,-1.0
-31,PNC Points,0.0,0.0,0.0,1.0,0.0,-1.0,0.0,-1.0
-32,PPMC,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-33,PenFed Pathfinder VS,1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-34,Redstone FCU VS,0.0,0.0,1.0,1.0,0.0,-1.0,0.0,-1.0
-35,TD Bank Cash card,0.0,0.0,1.0,1.0,1.0,0.0,0.0,-1.0
-36,US Bank Cash +,0.0,0.0,1.0,1.0,0.0,0.0,0.0,-1.0
-37,US Bank Cash 1,0.0,0.0,0.0,0.0,-1.0,0.0,0.0,-1.0
-38,US Bank Cash 2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-39,United Explorer,1.0,0.0,0.0,0.0,0.0,1.0,0.0,-1.0
-40,WF Propel,1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+Credit Card,Travel Rewards,Entertainment Rewards,Dining Rewards,Gas Rewards,Grocery Rewards,Annual Fee,Credit Line,Credit Score
+AAA Daily Advantage VS,0.0,0.0,0.0,0.0,1.0,-1.0,1.0,-1.0
+AOD FCU VS,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+American Express Blue Cash Everyday,0.0,0.0,0.0,0.0,1.0,0.0,1.0,-1.0
+American Express Gold,1.0,0.0,0.0,0.0,1.0,1.0,1.0,-1.0
+American Express Hilton Honors,1.0,0.0,0.0,0.0,0.0,0.0,1.0,698.0
+Amex Bus Plat,1.0,0.0,1.0,0.0,0.0,1.0,1.0,-1.0
+Amex Gold,1.0,0.0,1.0,0.0,0.0,1.0,1.0,-1.0
+Amex Schwab Plat,1.0,0.0,1.0,0.0,0.0,1.0,1.0,-1.0
+Aviator Red,1.0,0.0,0.0,0.0,0.0,1.0,1.0,-1.0
+BoA Customized Cash Rewards WMC 1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,-1.0
+BofA Premium Rewards,1.0,0.0,1.0,0.0,0.0,-1.0,1.0,-1.0
+Capital One Savor,0.0,0.0,1.0,0.0,0.0,0.0,1.0,-1.0
+Chase Amazon VS,0.0,0.0,0.0,0.0,0.0,0.0,1.0,-1.0
+Chase Freedom,0.0,1.0,1.0,0.0,0.0,1.0,0.0,700.0
+Chase Freedom Unlimited,1.0,0.0,0.0,0.0,0.0,1.0,1.0,-1.0
+Chase Sapphire Preferred,1.0,0.0,0.0,0.0,0.0,1.0,0.0,-1.0
+Citi American Airlines,1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+Citi Custom Cash Rewards WEMC,0.0,0.0,0.0,1.0,0.0,0.0,1.0,-1.0
+Citi Double Cash,0.0,1.0,1.0,1.0,1.0,1.0,0.0,830.0
+Citi Shop Your Way,0.0,0.0,1.0,1.0,1.0,0.0,1.0,-1.0
+Citibank,1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+Costco Visa,0.0,0.0,0.0,1.0,0.0,0.0,1.0,-1.0
+Delta Gold Personal from Amex,1.0,0.0,0.0,0.0,0.0,-1.0,0.0,-1.0
+Delta Platinum,1.0,0.0,1.0,0.0,0.0,1.0,1.0,-1.0
+IHG,1.0,0.0,1.0,0.0,0.0,1.0,1.0,-1.0
+JetBlue Card from Barclays,1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+MASTERCARD® PLATINUM CASH BACK,0.0,0.0,1.0,1.0,1.0,1.0,0.0,-1.0
+Mastercard World Credit Card,0.0,1.0,1.0,0.0,0.0,0.0,0.0,-1.0
+Mid Florida CU card,0.0,0.0,0.0,0.0,0.0,-1.0,1.0,-1.0
+Not mentioned,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+PPMC,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+PenFed Pathfinder VS,1.0,0.0,0.0,1.0,0.0,0.0,1.0,-1.0
+Redstone FCU VS,0.0,0.0,0.0,1.0,0.0,-1.0,1.0,-1.0
+TD Bank Cash card,0.0,0.0,0.0,1.0,0.0,-1.0,0.0,-1.0
+US Bank Cash +,0.0,0.0,1.0,0.0,0.0,0.0,0.0,-1.0
+US Bank Cash 1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,-1.0
+US Bank Cash 2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,-1.0
+United Explorer,1.0,0.0,1.0,0.0,0.0,1.0,1.0,-1.0
+Unknown,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+WF Propel,1.0,0.0,1.0,0.0,0.0,0.0,1.0,-1.0

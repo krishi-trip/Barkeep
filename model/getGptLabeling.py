@@ -151,4 +151,4 @@ def process_labeled_data(data):
   return collectivize_data(processed_data)
 
 fully_labeled_data = process_labeled_data(filtered_labeled_data).round(3)
-fully_labeled_data.to_csv('CardData.csv')
+fully_labeled_data.to_csv('CardData.csv', index=False)

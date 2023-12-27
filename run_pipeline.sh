@@ -11,7 +11,7 @@ echo "Parsing data with GPT"
 python model/getGptLabeling.py
 
 echo "Update chatbot metrics"
-cp model/CardData.csv chatbot/CardData.csv
+cp CardData.csv chatbot/CardData.csv
 # How often does AWS update?
 
 echo "Update databse"

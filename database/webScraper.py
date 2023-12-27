@@ -18,9 +18,12 @@ headers = {
 }
 
 #Parameters
-target_pages = 2
-min_kudos = 5
-debug_mode = 0
+f = open(os.path.dirname(__file__) + "/../parameters.json")
+param = json.load(f)
+target_pages = param['targetPages']
+min_kudos = param['minKudos']
+debug_mode = param['debugMode']
+f.close()
 
 #Making sure we get at least 1 page of posts
 if target_pages <= 0:
