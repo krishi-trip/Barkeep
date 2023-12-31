@@ -2,8 +2,9 @@ import openai
 import json
 import os.path
 import pandas as pd
+from tqdm import tqdm
 
-
+pbar = tqdm(total=100)
 post_content = []
 with open(os.path.dirname(__file__) + '/../data.json') as json_file:
     post_content = json.load(json_file)
@@ -82,6 +83,8 @@ def get_labeled_data(post_content):
     #Querying the gpt model with one post with all its replies
     gpt_response = get_gpt_response(prompt  + orig_post + replies)
     labeled_data.append(gpt_response)
+    updateVal = 33 / len(post_content)
+    pbar.update(updateVal)
 
   return labeled_data
 
@@ -108,6 +111,8 @@ def make_responses_valid(responses):
   #Making sure that each entry in the array is a single response
   for response in responses:
     split_data.extend(split_responses(response))
+    updateVal = 33 / len(responses)
+    pbar.update(updateVal)
 
   #Removing all invalid characters from the response
   valid_char_data = [remove_quotes(response) for response in split_data]
@@ -147,6 +152,9 @@ def process_labeled_data(data):
         cc_data.append(value)
 
     processed_data.append(cc_data)
+    
+    updateVal = 33 / len(data)
+    pbar.update(updateVal)
 
   return collectivize_data(processed_data)
 

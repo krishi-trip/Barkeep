@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "Checking for Requirements"
 pip install -r requirements.txt | grep -v 'already satisfied\|Defaulting to user installation'
 

@@ -6,6 +6,7 @@ import random
 import requests
 import json
 from bs4 import BeautifulSoup
+from tqdm import tqdm
 
 
 #URL of the FicoForums website
@@ -35,7 +36,7 @@ def get_post_links_and_titles(url):
   post_list = []
 
   #For every page in the credit card forums (1, 4384)
-  for i in range(1, target_pages+1):
+  for i in tqdm(range(1, target_pages+1)):
     #If it is the first page, keep the URL as is
     if i == 1:
       response = requests.get(url, headers=headers)

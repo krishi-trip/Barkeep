@@ -1,41 +1,38 @@
 Credit Card,Travel Rewards,Entertainment Rewards,Dining Rewards,Gas Rewards,Grocery Rewards,Annual Fee,Credit Line,Credit Score
-AAA Daily Advantage VS,0.0,0.0,0.0,0.0,1.0,-1.0,1.0,-1.0
+AAA Daily Advantage VS,0.0,0.0,0.0,0.0,1.0,-1.0,0.0,-1.0
 AOD FCU VS,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-American Express Blue Cash Everyday,0.0,0.0,0.0,0.0,1.0,0.0,1.0,-1.0
-American Express Gold,1.0,0.0,0.0,0.0,1.0,1.0,1.0,-1.0
-American Express Hilton Honors,1.0,0.0,0.0,0.0,0.0,0.0,1.0,698.0
-Amex Bus Plat,1.0,0.0,1.0,0.0,0.0,1.0,1.0,-1.0
-Amex Gold,1.0,0.0,1.0,0.0,0.0,1.0,1.0,-1.0
-Amex Schwab Plat,1.0,0.0,1.0,0.0,0.0,1.0,1.0,-1.0
-Aviator Red,1.0,0.0,0.0,0.0,0.0,1.0,1.0,-1.0
-BoA Customized Cash Rewards WMC 1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,-1.0
-BofA Premium Rewards,1.0,0.0,1.0,0.0,0.0,-1.0,1.0,-1.0
-Capital One Savor,0.0,0.0,1.0,0.0,0.0,0.0,1.0,-1.0
-Chase Amazon VS,0.0,0.0,0.0,0.0,0.0,0.0,1.0,-1.0
-Chase Freedom,0.0,1.0,1.0,0.0,0.0,1.0,0.0,700.0
-Chase Freedom Unlimited,1.0,0.0,0.0,0.0,0.0,1.0,1.0,-1.0
-Chase Sapphire Preferred,1.0,0.0,0.0,0.0,0.0,1.0,0.0,-1.0
-Citi American Airlines,1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-Citi Custom Cash Rewards WEMC,0.0,0.0,0.0,1.0,0.0,0.0,1.0,-1.0
-Citi Double Cash,0.0,1.0,1.0,1.0,1.0,1.0,0.0,830.0
-Citi Shop Your Way,0.0,0.0,1.0,1.0,1.0,0.0,1.0,-1.0
-Citibank,1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-Costco Visa,0.0,0.0,0.0,1.0,0.0,0.0,1.0,-1.0
-Delta Gold Personal from Amex,1.0,0.0,0.0,0.0,0.0,-1.0,0.0,-1.0
-Delta Platinum,1.0,0.0,1.0,0.0,0.0,1.0,1.0,-1.0
-IHG,1.0,0.0,1.0,0.0,0.0,1.0,1.0,-1.0
-JetBlue Card from Barclays,1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-MASTERCARD® PLATINUM CASH BACK,0.0,0.0,1.0,1.0,1.0,1.0,0.0,-1.0
+American Express Hilton Honors,1.0,0.0,0.0,0.0,0.0,-1.0,1.0,698.0
+Amex BCE,0.0,0.0,0.0,0.0,0.0,0.0,1.0,-1.0
+Amex Gold,1.0,1.0,1.0,0.0,1.0,0.0,1.0,-1.0
+Aviator Red (Barclay's),0.0,0.0,0.0,0.0,0.0,-1.0,1.0,-1.0
+BoA Customized Cash Rewards WMC 1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+BoA Customized Cash Rewards WMC 2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+"BofA Premium Rewards, Amex Gold, Amex Schwab Plat, Amex Bus Plat, BofA PR+CCR(x2), Costco Visa, Delta Plat, United Explorer, IHG, Hyatt, Old SPG, Amex Bus Plat, BBP, Lowes Amex AU, CFU AU",1.0,0.0,0.0,1.0,0.0,0.0,0.0,-1.0
+CapOne Savor,0.0,1.0,1.0,0.0,1.0,0.0,-1.0,800.0
+Chase Amazon VS,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+Chase FU,0.0,0.0,0.0,0.0,0.0,0.0,1.0,650.0
+Chase Freedom Unlimited,1.0,1.0,1.0,0.0,1.0,1.0,0.0,-1.0
+"Chase Freedom, Freedom Flex, Freedom, Arrival, ED, BCE, AA Platinum Select, MyWalgreens, Costco Visa, Delta Biz Platinum, Gold, etc",0.0,0.0,0.0,1.0,1.0,0.0,0.0,-1.0
+Chase Sapphire Preferred,1.0,1.0,0.0,0.0,0.0,0.0,0.0,-1.0
+Citi,1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+Citi AA,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+Citi Custom Cash Rewards WEMC,0.0,0.0,0.0,1.0,0.0,0.0,0.0,-1.0
+Citi Shop Your Way card,0.0,0.0,1.0,1.0,1.0,1.0,1.0,-1.0
+Delta Gold Personal (Amex),1.0,1.0,1.0,0.0,0.0,-1.0,0.0,-1.0
+Discover it Cash Back,0.0,1.0,1.0,0.0,1.0,1.0,1.0,830.0
+JetBlue (Barclays),1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+MASTERCARD® PLATINUM CASH BACK,0.0,0.0,1.0,1.0,1.0,-1.0,0.0,-1.0
 Mastercard World Credit Card,0.0,1.0,1.0,0.0,0.0,0.0,0.0,-1.0
-Mid Florida CU card,0.0,0.0,0.0,0.0,0.0,-1.0,1.0,-1.0
+Mid Florida CU card,0.0,0.0,0.0,-1.0,0.0,1.0,1.0,-1.0
 Not mentioned,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+PNC Cash Back,1.0,0.0,0.0,1.0,1.0,1.0,0.0,-1.0
+PNC Points,0.0,-1.0,-1.0,-1.0,-1.0,-1.0,0.0,-1.0
 PPMC,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-PenFed Pathfinder VS,1.0,0.0,0.0,1.0,0.0,0.0,1.0,-1.0
-Redstone FCU VS,0.0,0.0,0.0,1.0,0.0,-1.0,1.0,-1.0
-TD Bank Cash card,0.0,0.0,0.0,1.0,0.0,-1.0,0.0,-1.0
-US Bank Cash +,0.0,0.0,1.0,0.0,0.0,0.0,0.0,-1.0
-US Bank Cash 1,0.0,0.0,0.0,0.0,0.0,0.0,1.0,-1.0
-US Bank Cash 2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,-1.0
-United Explorer,1.0,0.0,1.0,0.0,0.0,1.0,1.0,-1.0
+PenFed Pathfinder VS,1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+Redstone FCU VS,0.0,0.0,1.0,1.0,0.0,-1.0,0.0,-1.0
+TD Bank Cash card,0.0,0.0,1.0,1.0,1.0,-1.0,0.0,-1.0
+US Bank Cash +,0.0,0.0,0.0,1.0,0.0,0.0,0.0,-1.0
+US Bank Cash 1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
+US Bank Cash 2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
 Unknown,0.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
-WF Propel,1.0,0.0,1.0,0.0,0.0,0.0,1.0,-1.0
+WF Propel,1.0,0.0,0.0,0.0,0.0,0.0,0.0,-1.0
