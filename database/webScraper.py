@@ -126,6 +126,9 @@ def get_post_data_and_kudos(post_list):
   return post_content
 
 post_content = get_post_data_and_kudos(post_list)
+
+pbar.close()
+
 with open(os.path.dirname(__file__) + '/../data.json', 'w') as f:
     json.dump(post_content, f)
 
