@@ -9,7 +9,7 @@ post_content = []
 with open(os.path.dirname(__file__) + '/../data.json') as json_file:
     post_content = json.load(json_file)
 
-API_KEY = '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'
+API_KEY = _INSERT_KEY_
 openai.api_key = API_KEY
 model_id = 'gpt-3.5-turbo-1106'
 
