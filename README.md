@@ -15,7 +15,7 @@
 
 <p align="center">
 <!--     <img alt="Mangal 4 TUI" src="assets/tui.gif"> -->
-    <img alt="Barkeeper" src="assets/barkeep.jpg" width="650">
+    <img alt="Barkeeper" src="assets/barkeep.jpg" width="600">
 </p>
 
 
@@ -23,19 +23,18 @@
 
 - [Features](#features)
 - [Usage](#usage)
-- [Configuration](#configuration)
+- [Roadmap](#roadmap)
 
 ## Features
 
-- __Caching__ - Barkeep will cache as much data as possible, so you don't have to wait for it to download the same data over and over again. 
-- __4 Different export formats__ - PDF, CBZ, ZIP and plain images
-- __Fast?__ - YES.
-- __Cross-Platform__ - Linux, macOS, Windows, Termux, even your toaster. (¬‿¬ )
+- __Caching__ - Barkeep will cache information daily to always give the most up to date information
+- __Fast?__ - YES. Barkeep utilizes CSV files to make it blazingly fast
+- __Cross-Platform__ - Linux, macOS, Windows, even your toaster ツ
 
 ## Usage
 
 Work in progress
 
-## Configuration
+## Roadmap
 
-Work in progress
+[ ] - Expand functionality beyond Credit Cards to insurance, investing, etc.
