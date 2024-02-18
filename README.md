@@ -35,6 +35,7 @@
 
 __Site is Active!__ <br>
 Visit it [here](https://barkeep-m031.onrender.com)
+*Note:* Site may take 2-3 minutes if server is booting up
 
 ## Roadmap
 
