@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 pbar = tqdm(total=100)
 post_content = []
-with open(os.path.dirname(__file__) + '/../data.json') as json_file:
+with open(os.path.dirname(__file__) + '/data.json') as json_file:
     post_content = json.load(json_file)
 
 API_KEY = _INSERT_KEY_

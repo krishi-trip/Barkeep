@@ -6,16 +6,13 @@ pip install -r requirements.txt | grep -v 'already satisfied\|Defaulting to user
 echo "Executing Pipeline"
 
 echo "Running webscrapper"
-python database/webScraper.py
+python webScraper.py
 
 echo "Parsing data with GPT"
-python model/getGptLabeling.py
+python getGptLabeling.py
 
 echo "Update chatbot metrics"
 cp CardData.csv chatbot/CardData.csv
 # How often does AWS update?
-
-echo "Update databse"
-python database/storeData.py
 
 echo "Finished Pipeline"

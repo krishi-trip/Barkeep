@@ -19,7 +19,7 @@ headers = {
 }
 
 #Parameters
-f = open(os.path.dirname(__file__) + "/../parameters.json")
+f = open(os.path.dirname(__file__) + "/parameters.json")
 param = json.load(f)
 target_pages = param['targetPages']
 min_kudos = param['minKudos']
@@ -129,7 +129,7 @@ post_content = get_post_data_and_kudos(post_list)
 
 pbar.close()
 
-with open(os.path.dirname(__file__) + '/../data.json', 'w') as f:
+with open(os.path.dirname(__file__) + '/data.json', 'w') as f:
     json.dump(post_content, f)
 
 if debug_mode == 1:
