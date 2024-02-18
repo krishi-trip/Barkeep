@@ -15,7 +15,7 @@
 
 <p align="center">
 <!--     <img alt="Mangal 4 TUI" src="assets/tui.gif"> -->
-    <img alt="Barkeeper" src="assets/barkeep.jpg" width="800">
+    <img alt="Barkeeper" src="assets/barkeep.jpg" width="650">
 </p>
 
 
